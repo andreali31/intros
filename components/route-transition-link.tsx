@@ -7,12 +7,16 @@ type RouteTransitionLinkProps = {
   children: React.ReactNode;
   className?: string;
   href: string;
+  delayMs?: number;
+  overlayDurationMs?: number;
 };
 
 export default function RouteTransitionLink({
   children,
   className,
-  href
+  href,
+  delayMs = 420,
+  overlayDurationMs = 420
 }: RouteTransitionLinkProps) {
   const router = useRouter();
   const timeoutRef = useRef<number | null>(null);
@@ -34,7 +38,7 @@ export default function RouteTransitionLink({
       startTransition(() => {
         router.push(href);
       });
-    }, 420);
+    }, delayMs);
   }
 
   return (
@@ -45,6 +49,7 @@ export default function RouteTransitionLink({
       <div
         aria-hidden="true"
         className={isTransitioning ? "route-transition-overlay active" : "route-transition-overlay"}
+        style={isTransitioning ? { animationDuration: `${overlayDurationMs}ms` } : undefined}
       />
     </>
   );

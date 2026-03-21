@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Link from "next/link";
 
 import RouteTransitionLink from "@/components/route-transition-link";
 
@@ -60,12 +61,17 @@ export default function JoinPage() {
     <main className="screen">
       <div className="screen-frame">
         <header className="screen-header">
-          <RouteTransitionLink className="header-home-link intros-word" href="/">
-            intros
-          </RouteTransitionLink>
+          <div className="header-link-stack">
+            <RouteTransitionLink className="header-home-link intros-word" href="/">
+              intros
+            </RouteTransitionLink>
+            <Link className="header-events-link events-word" href="/events">
+              events
+            </Link>
+          </div>
         </header>
 
-        <section className="screen-body">
+        <section className="screen-body join-screen-body">
           <form className="join-block" onSubmit={handleSubmit}>
             <input
               aria-label="Email"
@@ -76,7 +82,7 @@ export default function JoinPage() {
               type="email"
               value={email}
             />
-            <button className="join-title-submit screen-title screen-title-event intros-word" disabled={isSubmitting} type="submit">
+            <button className="join-title-submit screen-title screen-title-event events-word" disabled={isSubmitting} type="submit">
               submit
             </button>
             {state.kind !== "idle" ? (

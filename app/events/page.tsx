@@ -23,8 +23,8 @@ export default function EventsPage() {
                 <div className="event-meta">
                   <p>04/02/2026 12 pm</p>
                 </div>
-                <Link className="event-join-link" href="/join">
-                  i want in
+                <Link className="event-join-link events-word" href="/join">
+                  join
                 </Link>
               </div>
               <a

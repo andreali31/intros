@@ -78,7 +78,25 @@ button {
   text-decoration: none;
 }
 
+.header-link-stack {
+  display: grid;
+  justify-items: start;
+  gap: 0.2rem;
+}
+
+.header-events-link {
+  justify-self: start;
+  color: var(--dim);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .header-home-link:hover {
+  color: var(--text);
+}
+
+.header-events-link:hover {
   color: var(--text);
 }
 
@@ -92,6 +110,11 @@ button {
   place-items: center;
   text-align: center;
   position: relative;
+}
+
+.join-screen-body {
+  opacity: 0;
+  animation: fade-in 280ms ease 460ms forwards;
 }
 
 .events-page {
@@ -285,6 +308,8 @@ button {
 
 .join-title-submit {
   cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .join-title-submit:disabled {
@@ -361,6 +386,7 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .join-screen-body,
   .events-header-link,
   .event-card-entrance,
   .route-transition-overlay.active {
