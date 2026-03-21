@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"]
+const introsFont = localFont({
+  src: "../public/fonts/PlaywriteDKUloopetGuides-Regular.ttf",
+  variable: "--font-intros"
+});
+
+const eventsFont = localFont({
+  src: "../public/fonts/PlaywriteDKLoopet-Regular.ttf",
+  variable: "--font-events"
+});
+
+const siteFont = localFont({
+  src: "../public/fonts/NotoSansPahawhHmong-Regular.ttf",
+  variable: "--font-site"
 });
 
 export const metadata: Metadata = {
@@ -18,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${siteFont.variable} ${introsFont.variable} ${eventsFont.variable}`}>
         {children}
       </body>
     </html>
