@@ -23,8 +23,13 @@ export default function EventsPage() {
                 <div className="event-meta">
                   <p>04/02/2026 12 pm</p>
                 </div>
-                <Link className="event-join-link events-word" href="/join">
-                  join
+                <Link
+                  className="event-join-link events-word"
+                  href="https://luma.com/ev5e9fxe"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  luma
                 </Link>
               </div>
               <a
@@ -40,6 +45,40 @@ export default function EventsPage() {
                   priority
                   src="/paretologo.png"
                   width={360}
+                />
+              </a>
+            </article>
+            <article className="event-card event-card-a16z event-card-entrance">
+              <div className="event-copy">
+                <div className="event-card-header">
+                  <p className="event-status">Invite Only</p>
+                  <h2 className="event-name">a16z Networking Event</h2>
+                  <p className="event-summary">Caltech x USC x Art Center</p>
+                </div>
+                <div className="event-meta">
+                  <p>04/03/2026 6:30 pm</p>
+                </div>
+                <Link
+                  className="event-join-link events-word"
+                  href="https://luma.com/3y684oak"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  luma
+                </Link>
+              </div>
+              <a
+                className="event-logo-link event-logo-link-card"
+                href="https://speedrun.a16z.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <Image
+                  alt="a16z logo"
+                  className="event-logo event-logo-card"
+                  height={83}
+                  src="/speedrun.png"
+                  width={600}
                 />
               </a>
             </article>

@@ -164,6 +164,10 @@ button {
   width: min(16rem, 100%);
 }
 
+.event-logo-card-square {
+  width: min(8.5rem, 38vw);
+}
+
 .event-date {
   margin: 0;
   color: var(--dim);
@@ -216,6 +220,36 @@ button {
   padding: 1.35rem 1.4rem;
   border: 1px solid var(--line);
   text-align: left;
+}
+
+.event-card-a16z {
+  background: #FFFFFF;
+  border-color: rgba(240, 227, 203, 0.32);
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 16rem);
+}
+
+.event-card-a16z .event-status,
+.event-card-a16z .event-meta p {
+  color: #656464;
+}
+
+.event-card-a16z .event-name,
+.event-card-a16z .event-join-link,
+.event-card-a16z .event-summary {
+  color: #000000;
+}
+
+.event-card-a16z .event-join-link:hover {
+  color: #fff7ea;
+}
+
+.event-card-a16z .event-logo-link-card {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  transform: translateX(-8rem);
 }
 
 .event-card-entrance {
