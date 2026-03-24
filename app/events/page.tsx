@@ -25,11 +25,11 @@ export default function EventsPage() {
                 </div>
                 <Link
                   className="event-join-link events-word"
-                  href="https://luma.com/ev5e"
+                  href="https://luma.com/ev5e9fxe"
                   rel="noreferrer"
                   target="_blank"
                 >
-                  coming soon
+                  luma
                 </Link>
               </div>
               <a
@@ -58,14 +58,9 @@ export default function EventsPage() {
                 <div className="event-meta">
                   <p>04/03/2026 6:30 pm</p>
                 </div>
-                <Link
-                  className="event-join-link events-word"
-                  href="https://luma.com/3y684oak"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  luma
-                </Link>
+                <span className = "event-join-link events-word">
+                  coming soon
+                </span>
               </div>
               <a
                 className="event-logo-link event-logo-link-card"
